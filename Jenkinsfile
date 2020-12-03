@@ -8,10 +8,10 @@ pipeline {
             }
           }
         }
-        stage ("Testing stage") {
+        stage ("package stage") {
 		steps {
 		    withMaven (maven: 'maven-3.6.3'){
-			  bat 'mvn Test'      
+			  bat 'mvn package'      
             }
           }
         }
